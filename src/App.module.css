@@ -1,0 +1,55 @@
+.group-radio-wrapper {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  padding: 30px;
+}
+
+.group-radio-btn {
+  width: 147px;
+  height: 100px;
+  background: #d5f1fe;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.group-radio-btn p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #333333;
+}
+.group-radio-btn span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  color: #666666;
+}
+
+.group-radio-btn.active {
+  background: #003f5c;
+}
+.group-radio-btn.active::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: transparent 16px solid;
+  border-top: 16px #003f5c solid;
+}
+
+.group-radio-btn.active p,
+.group-radio-btn.active span {
+  color: #ffffff;
+}

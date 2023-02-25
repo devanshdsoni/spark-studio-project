@@ -1,0 +1,253 @@
+.card {
+  width: 328px;
+  background: #f8f8f8;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 30px;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+  --light-color: #d0f7ff;
+  --dark-color: #3ebeff;
+}
+
+/* Hover on the Card   */
+.card:hover {
+  transform: translateY(-30px);
+}
+.card:hover .card-header {
+  background-color: var(--light-color);
+}
+
+.card:hover .card-header .session-num-label svg {
+  fill: var(--dark-color);
+}
+.card:hover .card-header .session-num-label p {
+  color: white;
+}
+.card:hover .card-header .percentage-off-label {
+  background-color: var(--dark-color);
+  color: white;
+}
+.card:hover .card-header .display-name,
+.card:hover .rating-wrapper .reviews {
+  color: black;
+}
+
+/* Card Header */
+.card-header {
+  position: relative;
+  height: 140px;
+  background: var(--dark-color);
+  border-radius: 4px;
+  padding: 16px 20px;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  justify-content: flex-end;
+  will-change: color;
+  transition: all 0.2s;
+}
+
+.card-header .session-num-label {
+  width: max-content;
+  height: 30px;
+  border-radius: 1px;
+  position: absolute;
+  top: 16px;
+  left: 0;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  color: #333333;
+}
+.card-header .session-num-label svg {
+  fill: var(--light-color);
+  will-change: fill;
+  transition: all 0.2s;
+}
+.card-header .session-num-label p {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+
+.card-header .percentage-off-label {
+  background: var(--light-color);
+  width: 70px;
+  height: 70px;
+  border-end-start-radius: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #333333;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  padding-top: 15px;
+  padding-right: 15px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.card-header .display-name {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  transition: all 0.2s;
+}
+.card-header .rating-wrapper {
+  display: flex;
+  gap: 8px;
+}
+.rating-wrapper .reviews {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+}
+
+/* Card Body  */
+
+.card-body {
+  padding: 24px 16px;
+}
+.card-body .description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+}
+
+.card-body .outcomes {
+  margin-top: 16px;
+}
+.card-body .outcomes h4 {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+.card-body .outcomes ul {
+  margin-left: 20px;
+  margin-top: 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #666666;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-body .view-detail-btn {
+  margin-top: 25px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration-line: underline;
+  text-underline-offset: 3px;
+  text-transform: capitalize;
+  color: #333333;
+}
+
+/* Card Footer  */
+.card-footer .price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 16px;
+}
+
+.price-wrapper .price .discount {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #333333;
+}
+
+.price-wrapper .price .original {
+  margin-top: 7px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #999999;
+  text-decoration: line-through;
+}
+
+.price-wrapper .price-per-class {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #666666;
+}
+.price-wrapper .price-per-class span {
+  font-weight: 700;
+  color: #333333;
+}
+
+.card-footer .info {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #f47759;
+  text-align: center;
+}
+
+.card-footer .misc-details {
+  display: flex;
+  margin-top: 22px;
+  padding: 10px 16px;
+  background: #d5f1fe;
+  border-radius: 4px;
+  justify-content: space-between;
+}
+.card-footer .misc-details p {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #333333;
+}
+
+.card-footer .buy-course-btn {
+  border: none;
+  display: block;
+  margin: 26px auto;
+  cursor: pointer;
+  padding: 12px 40px;
+  background: linear-gradient(90deg, #f3705b 0%, #fcb444 100%);
+  border-radius: 48px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+}
+
+.divider {
+  border: 1px solid #e0e0e0;
+  width: 90%;
+  margin: auto;
+}
